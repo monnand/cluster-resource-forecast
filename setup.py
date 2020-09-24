@@ -87,4 +87,8 @@ setup(
     install_requires=REQUIRED_PACKAGES,
     packages=find_packages(),
     cmdclass={"build_py": build_py, "clean": clean},
+<<<<<<< HEAD
 )
+=======
+)
+>>>>>>> 5a0014027e050c6b565658c3f0865d60d6b364ac
