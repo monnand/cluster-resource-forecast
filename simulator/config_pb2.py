@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16simulator/config.proto\"6\n\nInt64Range\x12\x13\n\x0blower_bound\x18\x01 \x01(\x03\x12\x13\n\x0bupper_bound\x18\x02 \x01(\x03\".\n\x0c\x44\x61taLocation\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\r\n\x05table\x18\x02 \x01(\t\"\xb8\x01\n\x08VMFilter\x12\x12\n\nstart_time\x18\x01 \x01(\x03\x12\x10\n\x08\x65nd_time\x18\x02 \x01(\x03\x12 \n\x18remove_non_top_level_vms\x18\x03 \x01(\x08\x12#\n\x0epriority_range\x18\x04 \x01(\x0b\x32\x0b.Int64Range\x12+\n\x16scheduling_class_range\x18\x05 \x01(\x0b\x32\x0b.Int64Range\x12\x12\n\nmachine_id\x18\x06 \x03(\x03\"_\n\x0bLoadOrWrite\x12\x1e\n\x05input\x18\x01 \x01(\x0b\x32\r.DataLocationH\x00\x12\x1f\n\x06output\x18\x02 \x01(\x0b\x32\r.DataLocationH\x00\x42\x0f\n\rload_or_write\"\xac\x01\n\x16\x41\x62stractMetricSelector\x12\x1a\n\x10max_memory_usage\x18\x01 \x01(\x08H\x00\x12\x1e\n\x14\x63pu_usage_percentile\x18\x02 \x01(\x03H\x00\x12\x17\n\ravg_cpu_usage\x18\x03 \x01(\x08H\x00\x12\x1a\n\x10\x61vg_memory_usage\x18\x04 \x01(\x08H\x00\x12\x17\n\rmax_cpu_usage\x18\x05 \x01(\x08H\x00\x42\x08\n\x06metric\"\\\n\rResetAndShift\x12\x1a\n\x12reset_time_to_zero\x18\x01 \x01(\x08\x12!\n\x0crandom_shift\x18\x02 \x01(\x0b\x32\x0b.Int64Range\x12\x0c\n\x04seed\x18\x03 \x01(\x03\"\xa6\x01\n\tScheduler\x12(\n\tat_random\x18\x01 \x01(\x0b\x32\x13.Scheduler.AtRandomH\x00\x12\x17\n\rby_machine_id\x18\x02 \x01(\x08H\x00\x12\x19\n\x0f\x62y_vm_unique_id\x18\x03 \x01(\x08H\x00\x1a.\n\x08\x41tRandom\x12\x14\n\x0cnum_machines\x18\x01 \x01(\x03\x12\x0c\n\x04seed\x18\x02 \x01(\x03\x42\x0b\n\tscheduler\"\xa3\x07\n\x0fPredictorConfig\x12.\n\x14\x64\x65\x63orated_predictors\x18\n \x03(\x0b\x32\x10.PredictorConfig\x12<\n\ravg_predictor\x18\x01 \x01(\x0b\x32#.PredictorConfig.AvgPredictorConfigH\x00\x12<\n\rmax_predictor\x18\x02 \x01(\x0b\x32#.PredictorConfig.MaxPredictorConfigH\x00\x12<\n\ravg_decorator\x18\x03 \x01(\x0b\x32#.PredictorConfig.AvgDecoratorConfigH\x00\x12<\n\rmax_decorator\x18\x04 \x01(\x0b\x32#.PredictorConfig.MaxDecoratorConfigH\x00\x12M\n\x1bper_vm_percentile_predictor\x18\x05 \x01(\x0b\x32&.PredictorConfig.PerVMPercentileConfigH\x00\x12:\n\x11n_sigma_predictor\x18\x06 \x01(\x0b\x32\x1d.PredictorConfig.NSigmaConfigH\x00\x1aW\n\x12\x41vgPredictorConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x12\x12\n\npercentile\x18\x03 \x01(\x01\x1aW\n\x12MaxPredictorConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x12\x12\n\npercentile\x18\x03 \x01(\x01\x1aw\n\x15PerVMPercentileConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x12\x12\n\npercentile\x18\x03 \x01(\x01\x12\x1b\n\x13num_history_samples\x18\x04 \x01(\x03\x1ay\n\x0cNSigmaConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x12\x12\n\npercentile\x18\x03 \x01(\x01\x12\x1b\n\x13num_history_samples\x18\x04 \x01(\x03\x12\t\n\x01n\x18\x05 \x01(\x03\x1a\x14\n\x12\x41vgDecoratorConfig\x1a\x14\n\x12MaxDecoratorConfigB\x0b\n\tpredictor\"\xfa\x01\n\x13\x46ortuneTellerConfig\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0csave_samples\x18\x02 \x01(\x08\x12\x33\n\x06oracle\x18\x03 \x01(\x0b\x32!.FortuneTellerConfig.OracleConfigH\x00\x12%\n\tpredictor\x18\x04 \x01(\x0b\x32\x10.PredictorConfigH\x00\x1aY\n\x0cOracleConfig\x12\x1a\n\x12horizon_in_seconds\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x12\x17\n\npercentile\x18\x03 \x01(\x03:\x03\x31\x30\x30\x42\x08\n\x06teller\"\xfa\x03\n\x10SimulationConfig\x12\x1c\n\x05input\x18\x01 \x01(\x0b\x32\r.DataLocation\x12\x19\n\x06\x66ilter\x18\x02 \x01(\x0b\x32\t.VMFilter\x12&\n\x10\x66iltered_samples\x18\x03 \x01(\x0b\x32\x0c.LoadOrWrite\x12*\n\x14time_aligned_samples\x18\x04 \x01(\x0b\x32\x0c.LoadOrWrite\x12\'\n\x06metric\x18\x05 \x01(\x0b\x32\x17.AbstractMetricSelector\x12\x33\n\x1dsamples_with_abstract_metrics\x18\x06 \x01(\x0b\x32\x0c.LoadOrWrite\x12\'\n\x0freset_and_shift\x18\x07 \x01(\x0b\x32\x0e.ResetAndShift\x12\x32\n\x1csamples_with_reset_and_shift\x18\x08 \x01(\x0b\x32\x0c.LoadOrWrite\x12\x1d\n\tscheduler\x18\t \x01(\x0b\x32\n.Scheduler\x12\'\n\x11scheduled_samples\x18\n \x01(\x0b\x32\x0c.LoadOrWrite\x12,\n\x0e\x66ortune_teller\x18\x0b \x03(\x0b\x32\x14.FortuneTellerConfig\x12(\n\x11simulation_result\x18\x0c \x01(\x0b\x32\r.DataLocation'
+  serialized_pb=b'\n\x16simulator/config.proto\"6\n\nInt64Range\x12\x13\n\x0blower_bound\x18\x01 \x01(\x03\x12\x13\n\x0bupper_bound\x18\x02 \x01(\x03\".\n\x0c\x44\x61taLocation\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\r\n\x05table\x18\x02 \x01(\t\"\xb8\x01\n\x08VMFilter\x12\x12\n\nstart_time\x18\x01 \x01(\x03\x12\x10\n\x08\x65nd_time\x18\x02 \x01(\x03\x12 \n\x18remove_non_top_level_vms\x18\x03 \x01(\x08\x12#\n\x0epriority_range\x18\x04 \x01(\x0b\x32\x0b.Int64Range\x12+\n\x16scheduling_class_range\x18\x05 \x01(\x0b\x32\x0b.Int64Range\x12\x12\n\nmachine_id\x18\x06 \x03(\x03\"_\n\x0bLoadOrWrite\x12\x1e\n\x05input\x18\x01 \x01(\x0b\x32\r.DataLocationH\x00\x12\x1f\n\x06output\x18\x02 \x01(\x0b\x32\r.DataLocationH\x00\x42\x0f\n\rload_or_write\"\xac\x01\n\x16\x41\x62stractMetricSelector\x12\x1a\n\x10max_memory_usage\x18\x01 \x01(\x08H\x00\x12\x1e\n\x14\x63pu_usage_percentile\x18\x02 \x01(\x03H\x00\x12\x17\n\ravg_cpu_usage\x18\x03 \x01(\x08H\x00\x12\x1a\n\x10\x61vg_memory_usage\x18\x04 \x01(\x08H\x00\x12\x17\n\rmax_cpu_usage\x18\x05 \x01(\x08H\x00\x42\x08\n\x06metric\"\\\n\rResetAndShift\x12\x1a\n\x12reset_time_to_zero\x18\x01 \x01(\x08\x12!\n\x0crandom_shift\x18\x02 \x01(\x0b\x32\x0b.Int64Range\x12\x0c\n\x04seed\x18\x03 \x01(\x03\"\xa6\x01\n\tScheduler\x12(\n\tat_random\x18\x01 \x01(\x0b\x32\x13.Scheduler.AtRandomH\x00\x12\x17\n\rby_machine_id\x18\x02 \x01(\x08H\x00\x12\x19\n\x0f\x62y_vm_unique_id\x18\x03 \x01(\x08H\x00\x1a.\n\x08\x41tRandom\x12\x14\n\x0cnum_machines\x18\x01 \x01(\x03\x12\x0c\n\x04seed\x18\x02 \x01(\x03\x42\x0b\n\tscheduler\"\xdf\x07\n\x0fPredictorConfig\x12.\n\x14\x64\x65\x63orated_predictors\x18\n \x03(\x0b\x32\x10.PredictorConfig\x12<\n\ravg_predictor\x18\x01 \x01(\x0b\x32#.PredictorConfig.AvgPredictorConfigH\x00\x12<\n\rmax_predictor\x18\x02 \x01(\x0b\x32#.PredictorConfig.MaxPredictorConfigH\x00\x12<\n\ravg_decorator\x18\x03 \x01(\x0b\x32#.PredictorConfig.AvgDecoratorConfigH\x00\x12<\n\rmax_decorator\x18\x04 \x01(\x0b\x32#.PredictorConfig.MaxDecoratorConfigH\x00\x12M\n\x1bper_vm_percentile_predictor\x18\x05 \x01(\x0b\x32&.PredictorConfig.PerVMPercentileConfigH\x00\x12:\n\x11n_sigma_predictor\x18\x06 \x01(\x0b\x32\x1d.PredictorConfig.NSigmaConfigH\x00\x12@\n\x0flimit_predictor\x18\x07 \x01(\x0b\x32%.PredictorConfig.LimitPredictorConfigH\x00\x1a\x43\n\x12\x41vgPredictorConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x1a/\n\x14LimitPredictorConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x1a\x43\n\x12MaxPredictorConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x1a|\n\x15PerVMPercentileConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x12\x17\n\npercentile\x18\x03 \x01(\x01:\x03\x31\x30\x30\x12\x1b\n\x13num_history_samples\x18\x04 \x01(\x03\x1a\x65\n\x0cNSigmaConfig\x12\x17\n\x0fmin_num_samples\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x12\x1b\n\x13num_history_samples\x18\x03 \x01(\x03\x12\t\n\x01n\x18\x04 \x01(\x03\x1a\x14\n\x12\x41vgDecoratorConfig\x1a\x14\n\x12MaxDecoratorConfigB\x0b\n\tpredictor\"\xfa\x01\n\x13\x46ortuneTellerConfig\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0csave_samples\x18\x02 \x01(\x08\x12\x33\n\x06oracle\x18\x03 \x01(\x0b\x32!.FortuneTellerConfig.OracleConfigH\x00\x12%\n\tpredictor\x18\x04 \x01(\x0b\x32\x10.PredictorConfigH\x00\x1aY\n\x0cOracleConfig\x12\x1a\n\x12horizon_in_seconds\x18\x01 \x01(\x03\x12\x14\n\x0c\x63\x61p_to_limit\x18\x02 \x01(\x08\x12\x17\n\npercentile\x18\x03 \x01(\x03:\x03\x31\x30\x30\x42\x08\n\x06teller\"\xfa\x03\n\x10SimulationConfig\x12\x1c\n\x05input\x18\x01 \x01(\x0b\x32\r.DataLocation\x12\x19\n\x06\x66ilter\x18\x02 \x01(\x0b\x32\t.VMFilter\x12&\n\x10\x66iltered_samples\x18\x03 \x01(\x0b\x32\x0c.LoadOrWrite\x12*\n\x14time_aligned_samples\x18\x04 \x01(\x0b\x32\x0c.LoadOrWrite\x12\'\n\x06metric\x18\x05 \x01(\x0b\x32\x17.AbstractMetricSelector\x12\x33\n\x1dsamples_with_abstract_metrics\x18\x06 \x01(\x0b\x32\x0c.LoadOrWrite\x12\'\n\x0freset_and_shift\x18\x07 \x01(\x0b\x32\x0e.ResetAndShift\x12\x32\n\x1csamples_with_reset_and_shift\x18\x08 \x01(\x0b\x32\x0c.LoadOrWrite\x12\x1d\n\tscheduler\x18\t \x01(\x0b\x32\n.Scheduler\x12\'\n\x11scheduled_samples\x18\n \x01(\x0b\x32\x0c.LoadOrWrite\x12,\n\x0e\x66ortune_teller\x18\x0b \x03(\x0b\x32\x14.FortuneTellerConfig\x12(\n\x11simulation_result\x18\x0c \x01(\x0b\x32\r.DataLocation'
 )
 
 
@@ -436,10 +436,34 @@ _PREDICTORCONFIG_AVGPREDICTORCONFIG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1373,
+  serialized_end=1440,
+)
+
+_PREDICTORCONFIG_LIMITPREDICTORCONFIG = _descriptor.Descriptor(
+  name='LimitPredictorConfig',
+  full_name='PredictorConfig.LimitPredictorConfig',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
     _descriptor.FieldDescriptor(
-      name='percentile', full_name='PredictorConfig.AvgPredictorConfig.percentile', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
+      name='min_num_samples', full_name='PredictorConfig.LimitPredictorConfig.min_num_samples', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -455,8 +479,8 @@ _PREDICTORCONFIG_AVGPREDICTORCONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1307,
-  serialized_end=1394,
+  serialized_start=1442,
+  serialized_end=1489,
 )
 
 _PREDICTORCONFIG_MAXPREDICTORCONFIG = _descriptor.Descriptor(
@@ -481,13 +505,6 @@ _PREDICTORCONFIG_MAXPREDICTORCONFIG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='percentile', full_name='PredictorConfig.MaxPredictorConfig.percentile', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -500,8 +517,8 @@ _PREDICTORCONFIG_MAXPREDICTORCONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1396,
-  serialized_end=1483,
+  serialized_start=1491,
+  serialized_end=1558,
 )
 
 _PREDICTORCONFIG_PERVMPERCENTILECONFIG = _descriptor.Descriptor(
@@ -529,7 +546,7 @@ _PREDICTORCONFIG_PERVMPERCENTILECONFIG = _descriptor.Descriptor(
     _descriptor.FieldDescriptor(
       name='percentile', full_name='PredictorConfig.PerVMPercentileConfig.percentile', index=2,
       number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
+      has_default_value=True, default_value=float(100),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -552,8 +569,8 @@ _PREDICTORCONFIG_PERVMPERCENTILECONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1485,
-  serialized_end=1604,
+  serialized_start=1560,
+  serialized_end=1684,
 )
 
 _PREDICTORCONFIG_NSIGMACONFIG = _descriptor.Descriptor(
@@ -579,22 +596,15 @@ _PREDICTORCONFIG_NSIGMACONFIG = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='percentile', full_name='PredictorConfig.NSigmaConfig.percentile', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='num_history_samples', full_name='PredictorConfig.NSigmaConfig.num_history_samples', index=3,
-      number=4, type=3, cpp_type=2, label=1,
+      name='num_history_samples', full_name='PredictorConfig.NSigmaConfig.num_history_samples', index=2,
+      number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='n', full_name='PredictorConfig.NSigmaConfig.n', index=4,
-      number=5, type=3, cpp_type=2, label=1,
+      name='n', full_name='PredictorConfig.NSigmaConfig.n', index=3,
+      number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -611,8 +621,8 @@ _PREDICTORCONFIG_NSIGMACONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1606,
-  serialized_end=1727,
+  serialized_start=1686,
+  serialized_end=1787,
 )
 
 _PREDICTORCONFIG_AVGDECORATORCONFIG = _descriptor.Descriptor(
@@ -635,8 +645,8 @@ _PREDICTORCONFIG_AVGDECORATORCONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1729,
-  serialized_end=1749,
+  serialized_start=1789,
+  serialized_end=1809,
 )
 
 _PREDICTORCONFIG_MAXDECORATORCONFIG = _descriptor.Descriptor(
@@ -659,8 +669,8 @@ _PREDICTORCONFIG_MAXDECORATORCONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1751,
-  serialized_end=1771,
+  serialized_start=1811,
+  serialized_end=1831,
 )
 
 _PREDICTORCONFIG = _descriptor.Descriptor(
@@ -720,10 +730,17 @@ _PREDICTORCONFIG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='limit_predictor', full_name='PredictorConfig.limit_predictor', index=7,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
-  nested_types=[_PREDICTORCONFIG_AVGPREDICTORCONFIG, _PREDICTORCONFIG_MAXPREDICTORCONFIG, _PREDICTORCONFIG_PERVMPERCENTILECONFIG, _PREDICTORCONFIG_NSIGMACONFIG, _PREDICTORCONFIG_AVGDECORATORCONFIG, _PREDICTORCONFIG_MAXDECORATORCONFIG, ],
+  nested_types=[_PREDICTORCONFIG_AVGPREDICTORCONFIG, _PREDICTORCONFIG_LIMITPREDICTORCONFIG, _PREDICTORCONFIG_MAXPREDICTORCONFIG, _PREDICTORCONFIG_PERVMPERCENTILECONFIG, _PREDICTORCONFIG_NSIGMACONFIG, _PREDICTORCONFIG_AVGDECORATORCONFIG, _PREDICTORCONFIG_MAXDECORATORCONFIG, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -738,7 +755,7 @@ _PREDICTORCONFIG = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=853,
-  serialized_end=1784,
+  serialized_end=1844,
 )
 
 
@@ -783,8 +800,8 @@ _FORTUNETELLERCONFIG_ORACLECONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1938,
-  serialized_end=2027,
+  serialized_start=1998,
+  serialized_end=2087,
 )
 
 _FORTUNETELLERCONFIG = _descriptor.Descriptor(
@@ -840,8 +857,8 @@ _FORTUNETELLERCONFIG = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1787,
-  serialized_end=2037,
+  serialized_start=1847,
+  serialized_end=2097,
 )
 
 
@@ -949,8 +966,8 @@ _SIMULATIONCONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2040,
-  serialized_end=2546,
+  serialized_start=2100,
+  serialized_end=2606,
 )
 
 _VMFILTER.fields_by_name['priority_range'].message_type = _INT64RANGE
@@ -991,6 +1008,7 @@ _SCHEDULER.oneofs_by_name['scheduler'].fields.append(
   _SCHEDULER.fields_by_name['by_vm_unique_id'])
 _SCHEDULER.fields_by_name['by_vm_unique_id'].containing_oneof = _SCHEDULER.oneofs_by_name['scheduler']
 _PREDICTORCONFIG_AVGPREDICTORCONFIG.containing_type = _PREDICTORCONFIG
+_PREDICTORCONFIG_LIMITPREDICTORCONFIG.containing_type = _PREDICTORCONFIG
 _PREDICTORCONFIG_MAXPREDICTORCONFIG.containing_type = _PREDICTORCONFIG
 _PREDICTORCONFIG_PERVMPERCENTILECONFIG.containing_type = _PREDICTORCONFIG
 _PREDICTORCONFIG_NSIGMACONFIG.containing_type = _PREDICTORCONFIG
@@ -1003,6 +1021,7 @@ _PREDICTORCONFIG.fields_by_name['avg_decorator'].message_type = _PREDICTORCONFIG
 _PREDICTORCONFIG.fields_by_name['max_decorator'].message_type = _PREDICTORCONFIG_MAXDECORATORCONFIG
 _PREDICTORCONFIG.fields_by_name['per_vm_percentile_predictor'].message_type = _PREDICTORCONFIG_PERVMPERCENTILECONFIG
 _PREDICTORCONFIG.fields_by_name['n_sigma_predictor'].message_type = _PREDICTORCONFIG_NSIGMACONFIG
+_PREDICTORCONFIG.fields_by_name['limit_predictor'].message_type = _PREDICTORCONFIG_LIMITPREDICTORCONFIG
 _PREDICTORCONFIG.oneofs_by_name['predictor'].fields.append(
   _PREDICTORCONFIG.fields_by_name['avg_predictor'])
 _PREDICTORCONFIG.fields_by_name['avg_predictor'].containing_oneof = _PREDICTORCONFIG.oneofs_by_name['predictor']
@@ -1021,6 +1040,9 @@ _PREDICTORCONFIG.fields_by_name['per_vm_percentile_predictor'].containing_oneof 
 _PREDICTORCONFIG.oneofs_by_name['predictor'].fields.append(
   _PREDICTORCONFIG.fields_by_name['n_sigma_predictor'])
 _PREDICTORCONFIG.fields_by_name['n_sigma_predictor'].containing_oneof = _PREDICTORCONFIG.oneofs_by_name['predictor']
+_PREDICTORCONFIG.oneofs_by_name['predictor'].fields.append(
+  _PREDICTORCONFIG.fields_by_name['limit_predictor'])
+_PREDICTORCONFIG.fields_by_name['limit_predictor'].containing_oneof = _PREDICTORCONFIG.oneofs_by_name['predictor']
 _FORTUNETELLERCONFIG_ORACLECONFIG.containing_type = _FORTUNETELLERCONFIG
 _FORTUNETELLERCONFIG.fields_by_name['oracle'].message_type = _FORTUNETELLERCONFIG_ORACLECONFIG
 _FORTUNETELLERCONFIG.fields_by_name['predictor'].message_type = _PREDICTORCONFIG
@@ -1120,6 +1142,13 @@ PredictorConfig = _reflection.GeneratedProtocolMessageType('PredictorConfig', (_
     })
   ,
 
+  'LimitPredictorConfig' : _reflection.GeneratedProtocolMessageType('LimitPredictorConfig', (_message.Message,), {
+    'DESCRIPTOR' : _PREDICTORCONFIG_LIMITPREDICTORCONFIG,
+    '__module__' : 'simulator.config_pb2'
+    # @@protoc_insertion_point(class_scope:PredictorConfig.LimitPredictorConfig)
+    })
+  ,
+
   'MaxPredictorConfig' : _reflection.GeneratedProtocolMessageType('MaxPredictorConfig', (_message.Message,), {
     'DESCRIPTOR' : _PREDICTORCONFIG_MAXPREDICTORCONFIG,
     '__module__' : 'simulator.config_pb2'
@@ -1160,6 +1189,7 @@ PredictorConfig = _reflection.GeneratedProtocolMessageType('PredictorConfig', (_
   })
 _sym_db.RegisterMessage(PredictorConfig)
 _sym_db.RegisterMessage(PredictorConfig.AvgPredictorConfig)
+_sym_db.RegisterMessage(PredictorConfig.LimitPredictorConfig)
 _sym_db.RegisterMessage(PredictorConfig.MaxPredictorConfig)
 _sym_db.RegisterMessage(PredictorConfig.PerVMPercentileConfig)
 _sym_db.RegisterMessage(PredictorConfig.NSigmaConfig)
