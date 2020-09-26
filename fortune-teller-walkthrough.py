@@ -60,7 +60,7 @@ def main(argv=None, save_main_session=True):
     f.close()
 
     # Read Input Data
-    input_data_query = "SELECT * FROM {}.{} ".format(
+    input_data_query = "SELECT * FROM {}.{} WHERE time>=8*86400*1e6 AND time <= 16*86400*1e6 ".format(
         configs.input.dataset, configs.input.table
     )
     input_data = pipeline | "Query Usage Table" >> beam.io.Read(
